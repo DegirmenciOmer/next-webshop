@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+  @apply mb-5 block border-dark rounded-lg  shadow-md;
+}
+
+.primary-button {
+  @apply rounded bg-secondary/80 py-2 px-4 shadow outline-none hover:bg-secondary/90 active:bg-secondary;
+}
+.default-button {
+  @apply rounded bg-primary/80 py-2 px-4 text-dark shadow outline-none hover:bg-primary/90 active:bg-primary;
+}
