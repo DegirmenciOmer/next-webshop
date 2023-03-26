@@ -1,5 +1,8 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import React, { FC, PropsWithChildren, ReactNode } from 'react'
+import Footer from './Footer'
+import Header from './Header'
 type TLayoutProps = {
   title?: string
   keywords?: string
@@ -20,12 +23,10 @@ const Layout: FC<PropsWithChildren<TLayoutProps>> = ({
         <meta name='keywords' content={keywords} />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div>
-        <header>header</header>
-        <main className='flex min-h-screen flex-col justify-between'>
-          {children}
-        </main>
-        <footer>footer</footer>
+      <div className='min-h-screen flex flex-col justify-between'>
+        <Header />
+        <main className='container m-auto mt-4 px-4'>{children}</main>{' '}
+        <Footer />
       </div>
     </>
   )
