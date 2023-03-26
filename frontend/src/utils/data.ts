@@ -20,6 +20,7 @@ export interface Tproduct {
   description: string
   isFeatured?: boolean
   banner?: string
+  selected?: boolean
 }
 
 interface Tdata {

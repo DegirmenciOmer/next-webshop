@@ -47,12 +47,11 @@ function reducer(state: any, action: any) {
 export const StoreProvider = ({ children }: { children: React.ReactNode }) => {
   const [state, dispatch] = useReducer(reducer, initialValue)
 
-  const value = { state, dispatch }
-
   return (
     <StoreContext.Provider
       value={{
-        value,
+        state,
+        dispatch,
       }}
     >
       {children}
